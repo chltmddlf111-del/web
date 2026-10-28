@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>layout</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      ul {
+         list-style: none;
+      }
+
+      a {
+         color: inherit;
+         text-decoration: none;
+      }
+
+      .clearfix::after {
+         content: '';
+         display: block;
+         clear: both;
+      }
+
+      body,
+      h2 {
+         font-size: 30px;
+      }
+
+      .container {
+         /* background-color: antiquewhite; */
+         width: 1080px;
+         margin: 0 auto;
+      }
+
+      nav {
+         background-color: rgb(51, 187, 187);
+      }
+
+      nav ul li {
+         background: lemonchiffon;
+         width: 25%;
+         float: left;
+      }
+
+      nav ul li a{
+         border-right: 1px solid #333;
+         display: block;
+         width: 100px;
+         height: 100px;
+         text-align: center;
+      }
+
+       nav ul li:last-child a{
+         border-right: 0;
+       }
+
+      main {
+         background-color: #ccc;
+      }
+
+      header {
+         background-color: red;
+         width: 250px;
+         height: 500px;
+      }
+
+      .con1 {
+         background-color: green;
+         width: 250px;
+         height: 500px;
+      }
+
+      .con2 {
+         background-color: blue;
+         width: 560px;
+         height: 500px;
+         float: right;
+      }
+      footer{
+         background: #fff;
+         height: 80px;
+         border: 3px solid #333;
+      }
+      footer .container{
+         background-color: gold;
+      }
+      .box1{
+         width: 40%;
+         height: 60px;
+         background-color: red;
+         float: left;
+      }
+      .box2{
+           width: 40%;
+         height: 60px;
+         background-color: aquamarine;
+         float: right;
+      }
+      /* 
+      float 무효화
+      1. clear:both
+      2. overflowhidden
+      3. .clearfix::after{
+      content:''
+      display block;
+      clear:both
+      }                  */
+   </style>
+</head>
+
+<body>
+   <div class="wrap">
+      <nav class="container">
+         <ul class="gnb clearfix">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+         </ul>
+      </nav>
+      <main class="container">
+         <header>header</header>
+         <section class="con1">
+            <h2>con1</h2>
+         </section>
+         <section class="con2">
+            <h2>con2</h2>
+         </section>
+      </main>
+      <footer>
+         <div class="container clearfix">
+            <div class="box1">footer1</div>
+            <div class="box2">footer2</div>
+         </div>
+      </footer>
+   </div>
+</body>
+
+</html>

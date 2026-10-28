@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>border-radius</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+      }
+      .wrap{
+         width: 100%;
+         height: auto;
+         display: flex;
+      }
+      div{
+         width: 300px;
+         height: 200px;
+         margin: 20px;
+         background: rgba(0, 255, 0, 0.1);
+      }
+      .round{
+         border-radius: 20px;
+         border: 1px solid red;
+         border-left: blueviolet;
+         border-radius: 0 20px 30px 40px;
+         border-bottom-left-radius: 0;
+      }
+      .radius{
+         border: 1px solid blue;
+         border-radius: 60px/20px;
+      }
+      #bg{
+         border-radius: 50%;
+         width: 100px;
+         height: 100px;
+         background-image: url(https://actor.b-cdn.net/w500/zt1vx7FesNA4x6mTZtyzu2uco8E.jpg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="wrap">
+      <div class="round"></div>
+      <div class="round" id="bg"></div>
+      <div class="radius">60px/20px</div>
+   </div>
+</body>
+
+</html>

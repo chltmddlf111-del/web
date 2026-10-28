@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>margin</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+      }
+      div{
+         width: 200px;
+         height: 100px;
+         background: blue;
+         text-align: center;
+         color: #fff;
+         line-height: 100px;
+         /* 궁금행 */
+      }
+      .box1{
+         margin: 30px 50px 30px 50px;
+         /* 위아래는 같은 값 */
+         margin: 30px 50px;
+      }
+      .box2{
+         margin: 30px 5px 50px;
+         margin-left: 300px;
+      }
+      /* 위아래가 마진 값이 겹쳐질때 값이 높은 순으로 겹쳐진다. */
+      .box3{
+         margin: 100px 100px 100px 100px;
+         display: inline-block;
+      }
+      .box4{
+         display: inline-block;
+         margin-left: 150px;
+      }
+      /* displat: inline-block이 걸리면 겹치지 않는다. */
+
+   </style>
+</head>
+<body>
+   <div class="box1">박스1</div>
+   <div class="box2">박스2</div>
+   <div class="box3">박스3</div>
+   <div class="box4">박스4</div>
+</body>
+</html>

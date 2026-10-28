@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>테이블 만들기</title>
+
+   <style>
+      table,
+      th,
+      td {
+         border: 1px solid #ccc;
+         border-collapse: collapse;
+      }
+
+      th,
+      td {
+         padding: 10px 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <b2>표의 구성 요소</b2>
+   <table>
+      <caption>표의 구성 요소</caption><!-- caption : 표 제목 -->
+      <tr><!-- 행(가로줄) 만들기 -->
+         <th>주제</th><!-- th:제목셀 / tr:셀 -->
+         <th>태그</th>
+         <th colspan="2">비교</th>
+      </tr>
+      <tr><!-- 2행 -->
+         <th rowspan="4">테이블 구성 요소</th>
+         <td>table</td>
+         <td>테이블을 만드는 태그</td>
+         <td>1</td>
+      </tr>
+      <tr><!-- 3행 -->
+
+         <td>tr</td>
+         <td>테이블의 행을 만드는 태그</td>
+      </tr><!-- 4행 -->
+      <tr>
+
+         <td>th</td>
+         <td>테이블의 제목열을 만드는 태그</td>
+      </tr><!-- 5행 -->
+      <tr>
+
+         <td>td</td>
+         <td>테이블의 기본 열을 만드는 태그</td>
+      </tr>
+   </table>
+</body>
+
+</html>

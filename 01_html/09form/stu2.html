@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>stu2</title>
+</head>
+
+<body>
+   <main>
+      <header>
+         <h2>배가 고프다</h2>
+      </header>
+      <section>
+         <form>
+            <fieldset>
+               <legend>자기정보</legend>
+               <label for="user_name">이름 : </label>
+               <input type="text" id="user_name" required>
+               <label for="class_number"></label>
+               <input type="text" id="class_number" minlength="10" maxlength="10" required>
+            </fieldset>
+            <fieldset>
+               <legend>과목 선택</legend>
+               <label for="kyo_yang">1희망</label>
+               <select id="kyo_yang">
+                  <optgroup label="기초 및 필수 교양">
+                     <option value="a1">대학글쓰기</option>
+                     <option value="a2">대학영어</option>
+                     <option value="a3">컴퓨터 사고</option>
+                     <option value="a4">취업과 진로</option>
+                  </optgroup>
+                  <optgroup label="인문●예술모음">
+                     <option value="a1">철학의 이해</option>
+                     <option value="a2">한국사의 재조명</option>
+                     <option value="a3">세계 문학의 흐름</option>
+                     <option value="a4">현대 미술의 이해</option>
+                     <option value="a5">음악 감상과 비평</option>
+                  </optgroup>
+               </select>
+               <label for="kkyo_yang">2희망</label>
+               <select id="kkyo_yang">
+                  <optgroup label="기초 및 필수 교양">
+                     <option value="a1">대학글쓰기</option>
+                     <option value="a2">대학영어</option>
+                     <option value="a3">컴퓨터 사고</option>
+                     <option value="a4">취업과 진로</option>
+                  </optgroup>
+                  <optgroup label="인문●예술모음">
+                     <option value="a1">철학의 이해</option>
+                     <option value="a2">한국사의 재조명</option>
+                     <option value="a3">세계 문학의 흐름</option>
+                     <option value="a4">현대 미술의 이해</option>
+                     <option value="a5">음악 감상과 비평</option>
+                  </optgroup>
+               </select>
+            </fieldset>
+         </form>
+      </section>
+   </main>
+
+</body>
+
+</html>
+
+<!-- 알게된점! selet 와 datalist 는 같은 방향을 가고 있는 것 같지만, datalist가 어렵지만 조금더 좋다 정도. -->

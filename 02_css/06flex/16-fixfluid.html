@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>fixfluid</title>
+   <link rel="stylesheet" href="default.css">
+   <style>
+      .flex_continer{
+         display: flex;
+      }
+      .flex_item:nth-child(1){
+         width: 150px;
+         flex-shrink: 0;
+      }
+      .flex_item:nth-child(2){
+         flex-grow: 1;
+         
+      }
+      .flex_item:nth-child(3){
+         width: 200px;
+         flex-shrink: 0;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="flex_continer">
+      <div class="flex_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim temporibus distinctio
+         incidunt libero commodi soluta eos unde sequi possimus sint consequatur numquam non minima, debitis
+         dignissimos, ad suscipit adipisci fuga?</div>
+      <div class="flex_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim temporibus distinctio
+         incidunt libero commodi soluta eos unde sequi possimus sint consequatur numquam non minima, debitis
+         dignissimos, ad suscipit adipisci fuga?</div>
+      <div class="flex_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim temporibus distinctio
+         incidunt libero commodi soluta eos unde sequi possimus sint consequatur numquam non minima, debitis
+         dignissimos, ad suscipit adipisci fuga?</div>
+   </div>
+</body>
+
+</html>
