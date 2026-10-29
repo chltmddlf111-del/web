@@ -1,24 +1,73 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>nth-child</title>
    <style>
-      :root{
+      :root {
          font-size: 20px;
-         --font-color:#333;
-         --point-color1:red;
-         --point-color2:blue;
-         --point-color3:green;
+         --font-color: #333;
+         --point-color1: red;
+         --point-color2: blue;
+         --point-color3: green;
       }
-      ul{
+
+      ul {
          list-style: none;
       }
-       a{color: inherit; text-decoration: none;}
 
+      nav ul li {
+         width: 120px;
+         height: 30px;
+         line-height: 30px;
+         text-align: center;
+         border: 1px solid var(--point-color1);
+      }
+
+      nav ul li:nth-last-child(2) {
+         background: var(--point-color2);
+      }
+
+      nav ul li:nth-last-child(even) {
+         /* 짝수 */
+         background-color: var(--point-color3);
+      }
+
+      nav ul li:nth-last-child(odd) {
+         /* 홀수 */
+         background-color: var(--point-color1);
+      }
+
+      nav ul li:nth-child(2) a {
+         background-color: pink;
+      }
+
+      nav ul li:first-child {
+         background-color: lightblue;
+      }
+
+      nav ul li:last-child {
+         background-color: lightblue;
+      }
+
+      nav ul li:nth-last-child(2) {
+         background-color: lightcoral;
+      }
+
+      nav ul li:nth-child(5):hover a {
+         /* nav ul 5번째 li에 마우스를 올릴 때 */
+         font-size: 2rem;
+         /* font-size를 2rm으로 조정한다. */
+      }
+
+      nav ul li:nth-child(3):hover {
+         background-color: lightgreen;
+      }
    </style>
 </head>
+
 <body>
    <nav>
       <ul>
@@ -33,4 +82,5 @@
       </ul>
    </nav>
 </body>
+
 </html>
