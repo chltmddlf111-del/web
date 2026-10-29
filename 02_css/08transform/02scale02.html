@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>scale</title>
+   <style>
+      *{margin: 0;
+      padding: 0;}
+
+      ul{
+         display: flex;
+         margin: 0 auto;
+         width: 640px;
+         list-style: none;
+         justify-content: space-between;
+      }
+
+      ul li{
+         width: 200px;
+         height: 150px;
+         overflow: hidden;
+      }
+      ul li a{
+         display: block;
+         width: 100%; height: 100%;
+      }
+      ul li a img{
+         width: 100%; height: 100%;
+         object-fit: cover;
+         transition: 0.6s;
+         /* transform을 넣기 전에 메인값에 미리 줘야 전체 적용된다. */
+      }
+
+      ul li:hover a img{
+         transform: scale(1.2);
+      }
+
+
+   </style>
+
+</head>
+
+<body>
+   <ul>
+      <li><a href=""><img
+               src="https://i.namu.wiki/i/geGngQMnvmK2g3wuKU4O1uNs8Ix1HXQULk9PrnT57lHOlU4AxL9qsNCYXOOY9DIqPWtXnphq8G6NzCcvzv-ppQ.webp"
+               alt="먼작귀 주인공"></a></li>
+      <li><a href=""><img
+               src="https://i.namu.wiki/i/Yu5BDHQYknKmChLkS9bgOR0jqfE3ojWF_VgjMJ3nhbmztCFy_qp8pFs0eN4q7sM8FYnCU8Nv89wAPcBPMXo3Sg.webp"
+               alt="토끼"></a></li>
+      <li><a href=""><img
+               src="https://i.namu.wiki/i/JNKvslt1j4AioYDmWSiZdcJBzwWD2-XibS8JYqMiQcSpF5GSUzYHVdVBsSOPElngPI5CfiAUf0oM3bXXzFr30w.webp"
+               alt="가르마"></a></li>
+   </ul>
+</body>
+
+</html>
