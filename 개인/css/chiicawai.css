@@ -1,35 +1,76 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@700;800;900&display=swap');
 /* reset */
-*{
+* {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
-}
-
-ul {
-   list-style: none;
-}
-
-a{
-   text-decoration: none;
-   color: inherit;
 }
 
 body{
+   background-color: antiquewhite;
 }
 
+li {
+   list-style: none;
+}
+
+span {
+   margin-left: 30%;
+   line-height: 100px;
+}
+
+span a img {
+   background: rgb(214, 68, 93);
+   border-radius: 25%;
+   margin-right: 15px;
+}
 header{
-   flex: 1 1 0;
+   background-color: #fff;
+   height: 83px;
+}
+
+.con {
    display: flex;
-   
+}
+.containar{
+   width: 1250px;
 }
 
-header nav{
-   flex-direction: column;
+
+header div nav:nth-child(2){
+     width: 550px;
 }
 
-nav div.hunting_logo>a img{
-   width: 50px;
-   height: 50px;
-   
+header div ul li:nth-child(1) {
+   font-size: 18px;
+   font-weight: 900;
+}
+
+header div ul.tnb li:nth-child(2) {
+   font-size: 9px;
+}
+
+nav ul.tnb {
+   position: sticky;
+   top: 12pt;
+}
+
+nav ul.tnb>li>cite{
+   color: rgb(203, 63, 86);
+   font-style: normal;
+}
+
+nav ul.tnb>li:nth-child(2){
+   color: rgb(117, 86, 107);
+   letter-spacing: 2px;
+}
+
+nav ul.gnb li {
+   float: left;  
+   margin: 25px 15px;
+}
+
+nav ul.gnb li a {
+   text-decoration: none;
+   color: rgb(2, 2, 2);
 }
