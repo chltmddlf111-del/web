@@ -51,7 +51,7 @@ body {
    overflow: hidden;
    perspective: 1600px;
 }
-
+/* ----------------------------reset-------------------------------------- */
 .background_media {
    background: conic-gradient(from 206deg at 50% 50%, hsl(207deg 33.0129% 28.5256%) 0deg, hsl(261deg 37.5% 43.2692%) 180deg, hsl(0deg 40.3846% 32.6923%) 360deg);
    position: fixed;
@@ -89,7 +89,7 @@ body {
    /* 자식 요소들의 3D공간감을 유지하도록 설정하는 속성 */
    /* 반대로 flat 은 3d효과가 부모 평면으로 평탄화됨. */
 
-   /* animation: cube_rotate 20s linear infinite; */
+   animation: cube_rotate 20s linear infinite;
 }
 
 /* perspective = 원근감 설정
@@ -115,7 +115,7 @@ transform = 실제 3D 움직임 */
    /* 외곽선 없애기 */
    backface-visibility: hidden;
    /*  뒷면이 보이지 않도록 설정하는 속성 */
-   display: none;
+
 }
 
 #circle article h2 {
@@ -439,32 +439,38 @@ position: absolute;
    font-weight: 800;
    line-height: 1.35;
 }
-.formula_bar{
-   display: flex;
-   flex-wrap: wrap;
-   margin-top: 36px;
-   color: var(--color_muted);
-   gap: 8px;
-   font: 700 13px/1 var(--eng-font1);
+.formula_bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  color: var(--color_muted);
+  gap: 8px;
+  font: 700 13px/1 var(--eng-font1)
 }
 
 .formula_bar span,
-.formula_bar strong{
-   min-height: 34px;
-   align-items: center;
+.formula_bar strong,
+.formula_bar i {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
 }
 
 .formula_bar span,
-.formula_bar strong{
-    border: 1px solid;
-   padding: 0 12px;
-   background: rgba(3, 12, 12, 0.72);
+.formula_bar strong {
+  border: 1px solid rgba(157, 255, 236, 0.2);
+  padding: 0 12px;
+  background: rgba(3, 12, 12, 0.72);
 }
 
+.formula_bar strong {
+  color: var(--color_mint);
+}
 
-
-.formula_bar span{}
-.formula_bar strong{}
+.formula_bar i {
+  color: var(--color_pink);
+  font-style: normal;
+}
 
 /* ---------------------------face_6_start----------------------------------- */
 .beyond{
@@ -500,20 +506,55 @@ position: absolute;
     radial-gradient(circle at 90% 20%, rgba(255, 79, 184, 0.16), transparent 34%),
     var(--color_panel_strong);
 }
-
-
-#circle article.face_7 {
-   display: block;
+/* -------------------------face_6_end--------------------------------------------- */
+.tag_group{
+   position: relative;
+   z-index: 2;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
+   margin-top: 30px;
 }
+.tag_group span{
+   border: 1px solid  rgba(157, 255, 236, 0.22);
+   padding: 10px 13px;
+   color: #defef7;
+   background: rgba(0, 0, 0, 0.28);
+   font:700 12px/1 var(--eng-font1);
+}
+
+.face_8 .claim_card{
+ padding: 0;
+}
+
+.brand_video{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity: 0.72;
+}
+.claim_overlay{
+   position: absolute;
+   left: 40px;
+   right: 40px;
+   bottom: 40px;
+   background: linear-gradient(180deg, transparent,rgba(0,0,0,0.92) 44%);
+   /* 그라디언트 180도로 한쪽은 투명하게 한쪽은 rgba색상 불투명도 44% */
+   padding: 160px 34px 34px;
+}
+
+
+
+
 /* system_card */
 /* hero_card */
 /* formula_bar */
 /* .beyond_card   .beyond */
-/* .face_1{transform: rotateY(0deg) translateZ(-764px);}
+.face_1{transform: rotateY(0deg) translateZ(-764px);}
 .face_2{transform: rotateY(45deg) translateZ(-764px);}
 .face_3{transform: rotateY(90deg) translateZ(-764px);}
 .face_4{transform: rotateY(135deg) translateZ(-764px);}
 .face_5{transform: rotateY(180deg) translateZ(-764px);}
 .face_6{transform: rotateY(225deg) translateZ(-764px);}
 .face_7{transform: rotateY(270deg) translateZ(-764px);}
-.face_8{transform: rotateY(315deg) translateZ(-764px);} */
+.face_8{transform: rotateY(315deg) translateZ(-764px);}
