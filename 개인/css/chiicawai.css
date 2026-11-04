@@ -2,95 +2,107 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Noto+Sans+KR:wght@700;800;900&display=swap');
 /* reset */
 
+:root {
+   --main-color01: #D07998;
+   --main-color02: #A9A0A2;
+   --main-color03: #755171;
+}
 
 
-
-*{
+* {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
-li{
+
+ul,
+li {
    list-style: none;
 }
-body{
 
+a {
+   text-decoration: none;
 }
+
 /* ---------------reset------------------- */
 /* ---------------header------------------ */
 
-.headline{
+.headline {
+   position: relative;
+   display: flex;
    width: 100%;
-   display: flex;
-   position: relative;
-   height: 83px;
-   line-height: 83px;
-   
-}
-.headline .logo_box{
-   height: 50px;
-   position: relative;
-   left: 4%;
-   top: 20%;
-   
-   
-}
-.headline .title_box{
-   position: relative;
-   left: 5%;     
-}
-
-.headline .title_box h2{
-   font-size: 21px;
-}
-.headline .title_box h2>span{
-   color: pink;
-}
-
-.headline .title_box p{
-   position: absolute;
-   width: 200px;
-   top: 20px;
-   font-size: 9px;
-   color: rgba(138, 114, 118, 0.591);
-   letter-spacing: 2pt;
-}
-
-.headline .menu_box{
-   position: absolute;
-   right: 10px;
-   
-   
-}
-.headline .menu_box>nav>ul.gm_b{
-   display: flex;
-   text-align: center;  
-   justify-items: center;
+   height: 86px;
+   background-color: #fff;
    justify-content: space-between;
    align-items: center;
-   gap: 20px;
 }
-.headline .menu_box>nav>ul.gm_b a{
-   color: black;
-   text-decoration: none;
-   font-size: 11px;
+
+.logo_box {
+   position: absolute;
+   display: block;
+   left: 8vw;
+
 }
-/* -------------------heder end---------------------- */
-/* section start */
-.containar_0{
-   /* background 넣어야함. 그라디언트로. */
-   padding: 20px;
-   
+
+.title_box {
+   position: absolute;
+   left: 12vw;
 }
-.containar_0 p:nth-child(1){
-   
+
+.title_box h2 {}
+
+.title_box h2 span {
+   color: var(--main-color01);
 }
-.containar_0 p:nth-child(2){
-   font-size: 10px;
+
+.title_box p {
+   margin-top: -5px;
+   color: var(--main-color02);
 }
-.containar_0 div{
-   display: flex;
-   justify-content: space-between;
+
+.menu_box {
+   position: absolute;
+
+   right: 5vw;
+}
+
+.menu_box nav ul.gm_b {
    font-size: 14px;
-   margin: 9px 0;
+   display: flex;
+   gap: 8px;
 }
+
+.menu_box nav ul.gm_b li a {
+   color: inherit;
+}
+
+.menu_box nav ul.gm_b li:hover a {
+   color: var(--main-color01)
+}
+
+/* --------------------------------- */
+
+.bg_0{
+   width: 100%;
+   height: 152px;
+   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),url(../imges/bh_0.jpg) no-repeat center/ cover ;
+   
+}
+
+.containar_0 {
+   margin: 0 auto;
+   width: 95%;
+   align-items: center;
+   gap: 20px;
+   border: 2px solid #f3d5e4;
+   border-radius: 22px;
+   padding: 22px 28px;
+   background: linear-gradient(100deg, #fff0f8, #e7f5ff);
+   color: #755171;
+   box-shadow: 0 12px 28px #baa0b022;
+   position: relative;
+   top: 10px;
+}
+.containar_0 h2{}
+.containar_0 p{}
+.containar_0 small{}
