@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div id="result"></div>
+   <script>
+      /*
+      국어, 영어, 수학 점수를 prompt로 받아와서
+      토탈
+      평균
+      학점
+
+      평균이 90점 이상이면 A
+      80점 이상이면 B
+      70점 이상이면 C
+      60점 이상이면 D
+      그외는 F
+      "당신의 학점은      입니다"
+  */
+   const kor = Number(prompt("국어 점수를 입력하세요.", '0'));
+   const eng = Number(prompt("영어 점수를 입력하세요.", '0'));
+   const math = Number(prompt("수학 점수를 입력하세요.", '0'));
+   const medium = (kor+eng+math)/3;
+   let unit;
+   const result = document.getElementById('result')
+   
+
+   if(medium >= 90){
+      unit = "A";
+   }else if(medium < 90 && medium >= 80 ){
+      unit = "B";
+   }else if(medium < 80 && medium >= 70 ){
+      unit = "C";
+   }else if(medium < 70 && medium >= 60 ){
+      unit = "D";
+   }else{
+      unit = "F"
+   }
+
+   result.innerHTML = (`당신의 학점은 ${unit} 입니다.`);
+   // HTML의 result값에 (ㅡ)을 넣기.
+   
+  
+
+      
+   </script>
+</body>
+</html>
