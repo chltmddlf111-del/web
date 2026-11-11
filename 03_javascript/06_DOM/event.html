@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>event</title>
+   <style>
+      div{
+         border: 1px solid black;
+         padding: 0;
+         margin: 0;
+         height: 500px;
+         width: 500px;
+         text-align: center;
+         box-sizing: border-box;
+         
+      }
+   </style>
+</head>
+<body>
+   <div class="container"></div>
+   <script>
+      let container = document.querySelector('.container');
+      container.onclick = (event) => {
+         alert(`이벤트 발생 위치 : ${event.pageX}, ${event.pageY}`);
+      }
+   </script>
+</body>
+</html>
