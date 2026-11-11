@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+
+   </style>
+</head>
+<body>
+   <svg viewBox="0 0 100 200">
+	<defs>
+		<linearGradient id="grad-1" x1="30" y1="0" x2="70" y2="40" gradientUnits="userSpaceOnUse">
+			<stop offset="0.2" stop-color="#0ae448" />
+			<stop offset="0.5" stop-color="#abff84" />
+		</linearGradient>
+	</defs>
+	<ellipse class="shadow" cx="50" cy="188" rx="15" ry="5" />
+
+	<circle fill="url(#grad-1)" class="ball" cx="50" cy="22" r="15" />
+</svg>
+
+<script>
+document.addEventListener("DOMContentLoaded", (event) => {
+  //플러그인 등록(ScrollTrigger 사용하려면 무조건 등록)
+  gsap.registerPlugin(ScrollTrigger);
+
+  
+ gsap.set("svg", { opacity: 1 });
+
+gsap.to(".ball", {
+	keyframes: {
+		"0%": { yPercent: 0, scaleX: 1, scaleY: 1 },
+		"7%": { yPercent: 5, scaleY: 0.9, scaleX: 1.1, ease: "sine.in" },
+		"25%": { yPercent: 100, scaleY: 1.15, scaleX: 0.9, ease: "sine.in" },
+		"50%": { yPercent: 500, scaleX: 1, scaleY: 1, ease: "none" },
+		"60%": { scaleX: 1.6, scaleY: 0.4, ease: "none" },
+		"65%": { yPercent: 500, scaleX: 1, scaleY: 1 },
+		"100%": { yPercent: 0, scaleX: 1, scaleY: 1 },
+		easeEach: "sine.out"
+	},
+	duration: 1,
+	repeat: -1,
+	transformOrigin: "center bottom"
+});
+
+gsap.to(".shadow", {
+	scale: 0.7,
+	duration: 0.5,
+	repeat: -1,
+	yoyo: true,
+	ease: "sine.inOut",
+	transformOrigin: "center"
+});
+})
+</script>
+</body>
+</html>

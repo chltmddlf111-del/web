@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "web",
+			"path": "../../.."
+		},
+		{
+			"name": "04_GSAP",
+			"path": "../../../../율쌤/web1020/04_GSAP"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "04_GSAP"
+	}
+}
