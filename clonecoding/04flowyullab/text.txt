@@ -263,6 +263,8 @@ Teaching Note
 FlowYulLab은 UI/UX, 웹디자인, 프론트엔드, AI 코딩을 실무 관점으로 연결한 커리큘럼을 직접 기획합니다.
 초보자도 흐름을 따라가며 실제 결과물을 만들 수 있도록 설계되어 있습니다.
 플로율랩 커리큘럼 특징
+
+
 UI/UX
 Figma
 AI Coding
@@ -305,3 +307,4 @@ arrow_upward
 퍼스널 네임 율쌤 
 개인정보처리방침
 COPYRIGHT©FlowYulLab. All rights reserved.
+
