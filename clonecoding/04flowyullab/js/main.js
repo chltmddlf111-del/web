@@ -207,3 +207,16 @@ window.addEventListener('resize',()=>{
 document.querySelector('.select_box button').addEventListener('click', () => {
   document.querySelector('.select_box').classList.toggle('on');
 });
+
+document.querySelectorAll('header .container .all_con ul.list>li').forEach(function(li){
+   const button = li.querySelector('button');
+
+   //버튼이 없는 항목은 건너뛰기.
+   if(!button) return;
+
+   button.addEventListener('click', function(){ // button 을 클릭 할 때
+      //css의 미디어쿼리와 동일하게 1160px 이하에서만 실행
+      if(!window.matchMedia('(max-width:1160px)').matches) return;
+      li.classList.toggle('on');
+   });
+})
